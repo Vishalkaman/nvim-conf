@@ -1,4 +1,6 @@
-vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle>CR>", { desc = "Toggle File Explorer" })
+vim.keymap.set("n", "<leader>e", "<cmd>NvimTreeToggle<CR>", { desc = "Toggle File Explorer" })
+
+
 
 local telescope_builtin = require("telescope.builtin")
 
@@ -15,5 +17,9 @@ vim.keymap.set("n", "<leader>?", function() require('which-key').show( { global 
 
 
 -- Movement
-vim.keymap.set("i", "<C-l>", "<Right>" , { desc = "Move Right" })
-vim.keymap.set("i", "<C-h>", "<Left>" , { desc = "Move Right" })
+vim.keymap.set("n", "<C-h>", "<C-w><C-h>", { desc = "Move to left pane" }) -- like Emacs
+vim.keymap.set("n", "<C-l>", "<C-w><C-l>", { desc = "Move to right pane" }) -- like Emacs
+vim.keymap.set("i", "<C-b>", "<Left>", { desc = "Move Left" }) -- like Emacs
+vim.keymap.set("i", "<C-f>", "<Right>", { desc = "Move Right" }) -- like Emacs
+
+vim.keymap.set("i", "jk", "<ESC>")
