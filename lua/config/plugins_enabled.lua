@@ -1,0 +1,3 @@
+return {
+  ["auto-pairs"] = true,
+}

@@ -23,3 +23,7 @@ vim.keymap.set("i", "<C-b>", "<Left>", { desc = "Move Left" }) -- like Emacs
 vim.keymap.set("i", "<C-f>", "<Right>", { desc = "Move Right" }) -- like Emacs
 
 vim.keymap.set("i", "jk", "<ESC>")
+
+vim.keymap.set("n", "<leader>tp", function()
+  require("config.plugin-toggle").toggle_plugin()
+end, {desc = "Toggle Plugin"})

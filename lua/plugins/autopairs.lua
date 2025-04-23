@@ -1,5 +1,5 @@
+local enabled = require("config.plugins_enabled")
 return {
-	"jiangmiao/auto-pairs"
+	"jiangmiao/auto-pairs",
+  enabled = enabled["auto-pairs"]
 }
-
--- This is a comment
