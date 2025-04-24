@@ -9,7 +9,7 @@ function M.toggle_plugin()
     end
 
     local ok, enabled = pcall(dofile, enabled_path)
-    if not okay then enabled = {} end
+    if not ok then enabled = {} end
 
     enabled[input] = not enabled[input]
     local file = io.open(enabled_path, "w")
@@ -23,7 +23,7 @@ function M.toggle_plugin()
     print(input .. (enabled[input] and " enabled" or "disabled"))
     --vim.cmd("Lazy reload")
   end
-)
+  )
 end
 
 return M

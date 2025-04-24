@@ -33,3 +33,13 @@ vim.api.nvim_create_autocmd("BufWinEnter", {
   end,
 })
 
+-- Automatically set the correct indentation for markdown files
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "markdown",
+--   callback = function()
+--     vim.bo.shiftwidth = 2  -- Adjust indentation width (you can change this to 4 or any other value)
+--     vim.bo.tabstop = 2     -- Adjust tab width (same as above)
+--     vim.bo.expandtab = true  -- Convert tabs to spaces
+--   end
+-- })
+--
